@@ -1,6 +1,6 @@
 import { WeatherWidget } from "@/components/ui/WeatherWidget";
 import { Button } from "@/components/ui/button";
-import { ShieldCheck, HeartPulse, Cow, Tractor, Leaf, ArrowRight } from "lucide-react";
+import { ShieldCheck, Heart, Users, Truck, Leaf, ArrowRight } from "lucide-react";
 
 export default function Index() {
   return (
@@ -34,8 +34,8 @@ export default function Index() {
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <MiniCard icon={<ShieldCheck className="h-5 w-5" />} title="Guaranteed" subtitle="Claim support 24/7" />
                 <MiniCard icon={<Leaf className="h-5 w-5" />} title="Sustainable" subtitle="Climate-smart" />
-                <MiniCard icon={<HeartPulse className="h-5 w-5" />} title="Health" subtitle="Family coverage" />
-                <MiniCard icon={<Tractor className="h-5 w-5" />} title="Assets" subtitle="Tractors & tools" />
+                <MiniCard icon={<Heart className="h-5 w-5" />} title="Health" subtitle="Family coverage" />
+                <MiniCard icon={<Truck className="h-5 w-5" />} title="Assets" subtitle="Tractors & tools" />
               </div>
             </div>
           </div>
@@ -59,8 +59,8 @@ export default function Index() {
           <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <ProductCard title="Crop" desc="Yield & weather-indexed cover for major crops." icon={<Leaf className="h-5 w-5" />} />
             <ProductCard title="Health" desc="Affordable family plans with rural networks." icon={<HeartPulse className="h-5 w-5" />} />
-            <ProductCard title="Livestock" desc="Cattle, poultry and aquaculture protection." icon={<Cow className="h-5 w-5" />} />
-            <ProductCard title="Motor" desc="Tractors, two‑wheelers and farm vehicles." icon={<Tractor className="h-5 w-5" />} />
+            <ProductCard title="Livestock" desc="Cattle, poultry and aquaculture protection." icon={<Users className="h-5 w-5" />} />
+            <ProductCard title="Motor" desc="Tractors, two‑wheelers and farm vehicles." icon={<Truck className="h-5 w-5" />} />
           </div>
         </div>
       </section>
