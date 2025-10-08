@@ -58,7 +58,7 @@ export default function Index() {
           <h2 className="text-2xl md:text-3xl font-bold">Insurance products</h2>
           <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <ProductCard title="Crop" desc="Yield & weather-indexed cover for major crops." icon={<Leaf className="h-5 w-5" />} />
-            <ProductCard title="Health" desc="Affordable family plans with rural networks." icon={<HeartPulse className="h-5 w-5" />} />
+            <ProductCard title="Health" desc="Affordable family plans with rural networks." icon={<Heart className="h-5 w-5" />} />
             <ProductCard title="Livestock" desc="Cattle, poultry and aquaculture protection." icon={<Users className="h-5 w-5" />} />
             <ProductCard title="Motor" desc="Tractors, two‑wheelers and farm vehicles." icon={<Truck className="h-5 w-5" />} />
           </div>
