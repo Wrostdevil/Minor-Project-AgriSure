@@ -22,10 +22,19 @@ export function Header() {
           AgriSure
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
-          <NavItem to="/">Home</NavItem>
-          <NavItem to="/weather">Weather</NavItem>
           <NavItem to="/assistant">Assistant</NavItem>
+          <NavItem to="/weather">Weather</NavItem>
+          <NavItem to="/products">Products</NavItem>
+          <NavItem to="/solutions">Solutions</NavItem>
+          <NavItem to="/partners">Partners</NavItem>
+          <NavItem to="/resources">Resources</NavItem>
+          <NavItem to="/about">About</NavItem>
         </nav>
+        <div className="hidden md:block">
+          <Button asChild className="h-9 px-4">
+            <Link to="/quote">Get quote</Link>
+          </Button>
+        </div>
         <div className="md:hidden">
           <Button variant="outline" size="icon" aria-label="Open menu" onClick={() => setOpen((v) => !v)}>
             <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
@@ -37,15 +46,14 @@ export function Header() {
       {open && (
         <div className="md:hidden border-t bg-background">
           <div className="container py-3 flex flex-col gap-2">
-            <MobileLink to="/" onClick={() => setOpen(false)}>
-              Home
-            </MobileLink>
-            <MobileLink to="/weather" onClick={() => setOpen(false)}>
-              Weather
-            </MobileLink>
-            <MobileLink to="/assistant" onClick={() => setOpen(false)}>
-              Assistant
-            </MobileLink>
+            <MobileLink to="/assistant" onClick={() => setOpen(false)}>Assistant</MobileLink>
+            <MobileLink to="/weather" onClick={() => setOpen(false)}>Weather</MobileLink>
+            <MobileLink to="/products" onClick={() => setOpen(false)}>Products</MobileLink>
+            <MobileLink to="/solutions" onClick={() => setOpen(false)}>Solutions</MobileLink>
+            <MobileLink to="/partners" onClick={() => setOpen(false)}>Partners</MobileLink>
+            <MobileLink to="/resources" onClick={() => setOpen(false)}>Resources</MobileLink>
+            <MobileLink to="/about" onClick={() => setOpen(false)}>About</MobileLink>
+            <MobileLink to="/quote" onClick={() => setOpen(false)}>Get quote</MobileLink>
           </div>
         </div>
       )}
