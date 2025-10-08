@@ -21,16 +21,16 @@
     --popover-foreground: 222.2 47% 11.2%;
 
     /* AgriSure brand: emerald/amber */
-    --primary: 142 72% 30%;           /* emerald-700 */
+    --primary: 142 72% 30%; /* emerald-700 */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 142 40% 96%;         /* light emerald */
+    --secondary: 142 40% 96%; /* light emerald */
     --secondary-foreground: 142 72% 22%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 35%;
 
-    --accent: 38 92% 55%;             /* amber */
+    --accent: 38 92% 55%; /* amber */
     --accent-foreground: 24 10% 10%;
 
     --destructive: 0 84.2% 60.2%;
@@ -93,6 +93,10 @@
 }
 
 @layer base {
-  * { @apply border-border; }
-  body { @apply bg-background text-foreground; }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

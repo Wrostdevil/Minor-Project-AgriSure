@@ -7,7 +7,11 @@ export function cn(...inputs: ClassValue[]) {
 
 export function formatCurrency(v: number, currency: string = "USD") {
   try {
-    return new Intl.NumberFormat(undefined, { style: "currency", currency, maximumFractionDigits: 0 }).format(v);
+    return new Intl.NumberFormat(undefined, {
+      style: "currency",
+      currency,
+      maximumFractionDigits: 0,
+    }).format(v);
   } catch {
     return `${currency} ${v.toFixed(0)}`;
   }

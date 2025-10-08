@@ -36,8 +36,19 @@ export function Header() {
           </Button>
         </div>
         <div className="md:hidden">
-          <Button variant="outline" size="icon" aria-label="Open menu" onClick={() => setOpen((v) => !v)}>
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+          <Button
+            variant="outline"
+            size="icon"
+            aria-label="Open menu"
+            onClick={() => setOpen((v) => !v)}
+          >
+            <svg
+              viewBox="0 0 24 24"
+              className="h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
               <path d="M3 6h18M3 12h18M3 18h18" />
             </svg>
           </Button>
@@ -46,14 +57,30 @@ export function Header() {
       {open && (
         <div className="md:hidden border-t bg-background">
           <div className="container py-3 flex flex-col gap-2">
-            <MobileLink to="/assistant" onClick={() => setOpen(false)}>Assistant</MobileLink>
-            <MobileLink to="/weather" onClick={() => setOpen(false)}>Weather</MobileLink>
-            <MobileLink to="/products" onClick={() => setOpen(false)}>Products</MobileLink>
-            <MobileLink to="/solutions" onClick={() => setOpen(false)}>Solutions</MobileLink>
-            <MobileLink to="/partners" onClick={() => setOpen(false)}>Partners</MobileLink>
-            <MobileLink to="/resources" onClick={() => setOpen(false)}>Resources</MobileLink>
-            <MobileLink to="/about" onClick={() => setOpen(false)}>About</MobileLink>
-            <MobileLink to="/quote" onClick={() => setOpen(false)}>Get quote</MobileLink>
+            <MobileLink to="/assistant" onClick={() => setOpen(false)}>
+              Assistant
+            </MobileLink>
+            <MobileLink to="/weather" onClick={() => setOpen(false)}>
+              Weather
+            </MobileLink>
+            <MobileLink to="/products" onClick={() => setOpen(false)}>
+              Products
+            </MobileLink>
+            <MobileLink to="/solutions" onClick={() => setOpen(false)}>
+              Solutions
+            </MobileLink>
+            <MobileLink to="/partners" onClick={() => setOpen(false)}>
+              Partners
+            </MobileLink>
+            <MobileLink to="/resources" onClick={() => setOpen(false)}>
+              Resources
+            </MobileLink>
+            <MobileLink to="/about" onClick={() => setOpen(false)}>
+              About
+            </MobileLink>
+            <MobileLink to="/quote" onClick={() => setOpen(false)}>
+              Get quote
+            </MobileLink>
           </div>
         </div>
       )}
@@ -75,7 +102,15 @@ function NavItem({ to, children }: { to: string; children: React.ReactNode }) {
   );
 }
 
-function MobileLink({ to, children, onClick }: { to: string; children: React.ReactNode; onClick?: () => void }) {
+function MobileLink({
+  to,
+  children,
+  onClick,
+}: {
+  to: string;
+  children: React.ReactNode;
+  onClick?: () => void;
+}) {
   return (
     <Link to={to} onClick={onClick} className="py-2 text-base text-foreground">
       {children}

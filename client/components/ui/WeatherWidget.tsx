@@ -52,14 +52,19 @@ export function WeatherWidget() {
     <div className="rounded-xl border bg-card text-card-foreground p-4">
       <div className="flex items-center justify-between">
         <p className="font-semibold">Local Weather</p>
-        <a className="text-sm text-primary hover:underline" href="/weather">Open full</a>
+        <a className="text-sm text-primary hover:underline" href="/weather">
+          Open full
+        </a>
       </div>
       {loading ? (
         <p className="mt-3 text-sm text-muted-foreground">Loading weather…</p>
       ) : data ? (
         <div className="mt-3 grid grid-cols-3 gap-3 text-sm">
           <Stat label="Temp" value={`${Math.round(data.temperature ?? 0)}°C`} />
-          <Stat label="Wind" value={`${Math.round(data.windspeed ?? 0)} km/h`} />
+          <Stat
+            label="Wind"
+            value={`${Math.round(data.windspeed ?? 0)} km/h`}
+          />
           <Stat label="Rain" value={`${data.precipitation ?? 0} mm`} />
         </div>
       ) : (

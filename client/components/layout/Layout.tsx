@@ -16,9 +16,15 @@ export function Layout() {
         <div className="container py-8 text-sm text-muted-foreground flex flex-col sm:flex-row items-center justify-between gap-3">
           <p>© {new Date().getFullYear()} AgriSure. All rights reserved.</p>
           <nav className="flex items-center gap-4">
-            <a className="hover:text-foreground" href="/">Home</a>
-            <a className="hover:text-foreground" href="/weather">Weather</a>
-            <a className="hover:text-foreground" href="/assistant">Assistant</a>
+            <a className="hover:text-foreground" href="/">
+              Home
+            </a>
+            <a className="hover:text-foreground" href="/weather">
+              Weather
+            </a>
+            <a className="hover:text-foreground" href="/assistant">
+              Assistant
+            </a>
           </nav>
         </div>
       </footer>
